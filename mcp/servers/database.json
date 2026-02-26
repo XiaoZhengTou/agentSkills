@@ -1,0 +1,21 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "数据库 MCP Server，通过 Prisma 提供数据库查询和迁移能力",
+  "command": "npx",
+  "args": ["@modelcontextprotocol/server-postgres"],
+  "env": {
+    "DATABASE_URL": "${DATABASE_URL}"
+  },
+  "tools": [
+    "query",
+    "execute",
+    "list_tables",
+    "describe_table",
+    "run_migration"
+  ],
+  "prisma": {
+    "schema_path": "./prisma/schema.prisma",
+    "migrations_path": "./prisma/migrations"
+  }
+}

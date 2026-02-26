@@ -1,0 +1,48 @@
+{
+  "skills": {
+    "paths": ["../skills"],
+    "enabled": true
+  },
+  "mcp": {
+    "servers": {
+      "filesystem": "./mcp/servers/filesystem.json",
+      "database": "./mcp/servers/database.json",
+      "github": "./mcp/servers/github.json"
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep"
+    ]
+  },
+  "common": {
+    "pre_skill": "detect-project",
+    "context_file": ".claude/project-context.json",
+    "context_ttl_hours": 24
+  },
+  "agents": {
+    "common": {
+      "skills": ["detect-project"]
+    },
+    "analyst": {
+      "skills": ["requirements-parse", "prd-generate", "task-decompose"]
+    },
+    "backend": {
+      "skills": ["api-design", "prisma-schema", "route-implement", "langchain-chain"]
+    },
+    "frontend": {
+      "skills": ["component-design", "page-implement", "api-integration", "a11y-check", "wireframe-generate", "design-token", "component-variant", "responsive-layout", "animation-spec"]
+    },
+    "tester": {
+      "skills": ["unit-test", "integration-test", "test-report"]
+    },
+    "reviewer": {
+      "skills": ["code-review", "acceptance-check", "deploy-verify"]
+    }
+  }
+}

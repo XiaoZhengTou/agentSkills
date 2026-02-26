@@ -1,0 +1,24 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "GitHub MCP Server，提供代码仓库管理、PR 创建和 Issue 跟踪能力",
+  "command": "npx",
+  "args": ["@modelcontextprotocol/server-github"],
+  "env": {
+    "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+  },
+  "tools": [
+    "create_pull_request",
+    "list_issues",
+    "create_issue",
+    "get_file_contents",
+    "push_files",
+    "create_branch",
+    "list_commits"
+  ],
+  "defaults": {
+    "owner": "${GITHUB_OWNER}",
+    "repo": "${GITHUB_REPO}",
+    "base_branch": "main"
+  }
+}

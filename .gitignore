@@ -1,0 +1,37 @@
+# 项目上下文（自动生成，不提交）
+.claude/project-context.json
+.claude/handoffs/
+
+# 嵌套项目（独立仓库）
+loan-management/
+
+# 依赖
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# 构建产物
+.next/
+dist/
+build/
+out/
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+npm-debug.log*
