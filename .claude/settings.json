@@ -1,6 +1,6 @@
 {
   "skills": {
-    "paths": ["../skills"],
+    "paths": [".claude/commands"],
     "enabled": true
   },
   "mcp": {
@@ -27,7 +27,7 @@
   },
   "agents": {
     "common": {
-      "skills": ["detect-project"]
+      "skills": ["detect-project", "parallel-dispatch"]
     },
     "analyst": {
       "skills": ["requirements-parse", "prd-generate", "task-decompose"]

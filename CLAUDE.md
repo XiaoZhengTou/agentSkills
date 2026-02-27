@@ -68,9 +68,9 @@
 
 ## Skill 编写规范
 
-### 核心必需文件：SKILL.md
+### 核心必需文件
 
-每个 skill 是 `skills/<agent>/` 目录下的一个 Markdown 文件，文件名即 skill 名称（如 `unit-test.md`）。
+每个 skill 是 `.claude/commands/` 目录下的一个 Markdown 文件，文件名即 skill 名称（如 `unit-test.md`）。
 
 ### YAML 元数据（Frontmatter）
 
@@ -116,18 +116,18 @@ frontmatter 之后是 skill 的执行指令，固定包含三个二级标题：
 ### 可选辅助目录
 
 ```
-skills/<agent>/<skill-name>/
+.claude/commands/<skill-name>/
   SKILL.md          # 主文件（必需）
-  scripts/          # 辅助脚本，如 parse-deps.sh、validate-schema.py
-  references/       # 参考资料，如 openapi-template.yaml、test-patterns.md
-  assets/           # 静态资源，如代码模板、配置样例
+  scripts/          # 辅助脚本
+  references/       # 参考资料
+  assets/           # 静态资源
 ```
 
 > 简单 skill 直接用单文件 `<skill-name>.md` 即可，只有逻辑复杂时才拆分为目录结构。
 
 ### 新增自定义 Skill 步骤
 
-1. 在 `skills/<agent>/` 下创建 `<skill-name>.md`
+1. 在 `.claude/commands/` 下创建 `<skill-name>.md`
 2. 写入 frontmatter 元数据（name / agent / inputs / outputs）
 3. 编写 `## description`、`## steps`、`## output` 三节内容
 4. 在 `.claude/settings.json` 的对应 agent 的 `skills` 数组中添加该 skill 名称
