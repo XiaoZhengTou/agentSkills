@@ -62,9 +62,27 @@ docs/        架构说明和角色定义
 .claude/     Claude Code 全局配置
 ```
 
+## 工程纪律
+
+本框架遵循 ECC (everything-claude-code) 工程规范：
+
+- **Eval-First**：每个任务先定义验收标准，执行后对比 delta
+- **TDD 强制**：Backend/Frontend Agent 先写失败测试，再实现（Red/Green/Refactor）
+- **系统化调试**：7步调试流程，禁止随机试错
+- **复杂度分级**：trivial/small/medium/large 走不同深度流水线
+- **De-Sloppify**：实现后、测试前有独立清理通道
+- **独立上下文**：Reviewer 必须在独立 session 中运行（消除作者偏见）
+- **三次失败升级**：同一问题失败 3 次后上报用户
+
+详见 [工程纪律规范](docs/engineering-standards.md)
+
 ## 文档
 
 - [体系架构说明](docs/architecture.md)
 - [各 Agent 职责定义](docs/agent-roles.md)
 - [完整开发流水线](workflows/full-pipeline.md)
+- [工程纪律规范](docs/engineering-standards.md)
+- [ECC 分析与启示](docs/ecc-insights.md)
+- [大衍天工分析与启示](docs/bizos-insights.md)
+- [Agent 间消息协议](docs/agent-message-protocol.md)
 - [团队使用规范](CLAUDE.md)
